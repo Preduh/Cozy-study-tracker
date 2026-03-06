@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cozy-cream: #fdfbf7;
+  --color-cozy-clay: #e8e4de;
+  --color-cozy-brown: #4a3728;
+  --color-cozy-coffee: #3d3028;
+  --color-cozy-wood: #8b5e3c;
+  --color-cozy-latte: #c4a484;
+  --color-cozy-sage: #a8b5a2;
+  --color-cozy-terracotta: #d68c7a;
+  --color-cozy-sand: #f4e9dc;
+  
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+}
+
+@layer base {
+  body {
+    @apply bg-cozy-cream text-cozy-brown;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold text-cozy-brown;
+  }
+}
+
+.cozy-card {
+  @apply bg-white border border-cozy-clay/30 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] transition-all duration-300;
+}
+
+.cozy-card:hover {
+  @apply shadow-[0_8px_20px_-8px_rgba(0,0,0,0.1)] border-cozy-clay/50;
+}
+
+.cozy-button {
+  @apply px-6 py-2.5 rounded-full font-sans font-bold text-xs transition-all duration-200 active:scale-95 disabled:opacity-50;
+}
+
+.cozy-button-primary {
+  @apply px-6 py-2.5 rounded-full font-sans font-bold text-xs transition-all duration-200 active:scale-95 disabled:opacity-50 bg-cozy-brown text-white hover:bg-cozy-brown/90 shadow-sm;
+}
+
+.cozy-button-secondary {
+  @apply px-6 py-2.5 rounded-full font-sans font-bold text-xs transition-all duration-200 active:scale-95 disabled:opacity-50 bg-cozy-sage text-white hover:bg-cozy-sage/90 shadow-sm;
+}
+
+.cozy-button-ghost {
+  @apply px-6 py-2.5 rounded-full font-sans font-bold text-xs transition-all duration-200 active:scale-95 disabled:opacity-50 bg-transparent text-cozy-brown hover:bg-cozy-clay/10;
+}
+
+.cozy-input {
+  @apply w-full rounded-xl border border-cozy-clay/50 bg-white/40 focus:outline-none focus:ring-2 focus:ring-cozy-brown/5 focus:border-cozy-brown/30 transition-all;
+}
